@@ -14,6 +14,8 @@
     justify-content: center;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    user-select: none;
 }
 
 /* Estilos para los SVG */
@@ -41,6 +43,7 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
     /* Evitar interacciones cuando está cerrado */
     pointer-events: none;
+    user-select: none;
 }
 
 #chatbot-canvas-container.open {
@@ -88,7 +91,7 @@
 
     #chatbot-canvas-container {
         width: 90vw;
-        height: 80vh;
+        height: 75vh;
         bottom: 10vh;
         right: 5vw;
     }
