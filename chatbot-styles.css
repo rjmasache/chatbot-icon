@@ -1,0 +1,83 @@
+/* Estilos para el icono del chatbot */
+#chatbot-canvas-icon {
+    width: 3.5vw;
+    height: 3.5vw;
+    position: fixed;
+    bottom: 4vh;
+    right: 4vw;
+    z-index: 1000;
+    color: #ffffff;
+    background-color: #003f72;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los SVG */
+#chatbot-canvas-icon svg {
+    width: 40%;
+    height: 40%;
+    max-width: 100%; /* No exceder el tamaño del contenedor */
+    max-height: 100%;
+}
+
+/* Estilos para el contenedor del iframe */
+#chatbot-canvas-container {
+    width: 35vw;
+    height: 80vh;
+    position: fixed;
+    bottom: 12vh;
+    right: 6vw;
+    background-color: #ffffff;
+    border: none;
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Mantener oculto inicialmente */
+}
+
+/* Estilos para el iframe */
+#chatbot-canvas-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/*
+* Responsive design
+* Tablets (Resolución entre 641px y 1024px)
+*/
+@media (max-width: 1024px) and (min-width: 641px) {
+    #chatbot-canvas-icon {
+        width: 8vw;
+        height: 8vw;
+        bottom: 4vh;
+        right: 4vw;
+    }
+
+    #chatbot-canvas-container {
+        width: 70vw;
+        height: 70vh;
+        bottom: 12vh;
+        right: 8vw;
+    }
+}
+
+/* Responsive design - Dispositivos móviles (Resolución hasta 640px) */
+@media (max-width: 640px) {
+    #chatbot-canvas-icon {
+        width: 12vw;
+        height: 12vw;
+        bottom: 3vh;
+        right: 3vw;
+    }
+
+    #chatbot-canvas-container {
+        width: 90vw;
+        height: 80vh;
+        bottom: 11vh;
+        right: 5vw;
+    }
+}
