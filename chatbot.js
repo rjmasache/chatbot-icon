@@ -62,7 +62,7 @@ function createChatbotContainer() {
 
     const chatbotIframe = document.createElement("iframe");
     chatbotIframe.id = "chatbot-canvas-iframe";
-    chatbotIframe.src = "http://localhost:3000/";
+    chatbotIframe.src = "https://chatbot-pinecone.vercel.app/";
 
     chatbotContainer.appendChild(chatbotIframe);
     document.body.appendChild(chatbotContainer);
@@ -77,12 +77,12 @@ function updateChatbotIcon(isOpen, chatbotIcon) {
 
 // Mostrar/ocultar el chatbot y actualizar el icono SVG
 function showChatbot(chatbotContainer) {
-    chatbotContainer.style.display = "block";
+    chatbotContainer.classList.add("open");
     isChatbotOpen = true;
 }
 
 function hideChatbot(chatbotContainer) {
-    chatbotContainer.style.display = "none";
+    chatbotContainer.classList.remove("open");
     isChatbotOpen = false;
 }
 

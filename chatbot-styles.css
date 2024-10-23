@@ -20,7 +20,7 @@
 #chatbot-canvas-icon svg {
     width: 40%;
     height: 40%;
-    max-width: 100%; /* No exceder el tamaño del contenedor */
+    max-width: 100%;
     max-height: 100%;
 }
 
@@ -35,7 +35,19 @@
     border: none;
     z-index: 1001;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: none; /* Mantener oculto inicialmente */
+    opacity: 0;
+    transform: scale(0.9);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* Evitar interacciones cuando está cerrado */
+    pointer-events: none;
+}
+
+#chatbot-canvas-container.open {
+    opacity: 1;
+    transform: scale(1);
+    /* Permitir interacciones cuando está abierto */
+    pointer-events: auto;
 }
 
 /* Estilos para el iframe */
@@ -46,7 +58,7 @@
 }
 
 /*
-* Responsive design
+* Responsive web design
 * Tablets (Resolución entre 641px y 1024px)
 */
 @media (max-width: 1024px) and (min-width: 641px) {
@@ -59,13 +71,13 @@
 
     #chatbot-canvas-container {
         width: 70vw;
-        height: 70vh;
-        bottom: 12vh;
+        height: 80vh;
+        bottom: 11vh;
         right: 8vw;
     }
 }
 
-/* Responsive design - Dispositivos móviles (Resolución hasta 640px) */
+/* Dispositivos móviles (Resolución hasta 640px) */
 @media (max-width: 640px) {
     #chatbot-canvas-icon {
         width: 12vw;
@@ -77,7 +89,7 @@
     #chatbot-canvas-container {
         width: 90vw;
         height: 80vh;
-        bottom: 11vh;
+        bottom: 10vh;
         right: 5vw;
     }
 }
